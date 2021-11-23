@@ -181,7 +181,7 @@ define([
       window.Element.prototype.msMatchesSelector ||
       window.Element.prototype.webkitMatchesSelector;
 
-    if ((data.element != null && matches.call(data.element, ':disabled')) ||
+    if ((data.element != null && data.element.matches(':disabled')) ||
         (data.element == null && data.disabled)) {
       attrs['aria-disabled'] = 'true';
 
